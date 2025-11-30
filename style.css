@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'Minecraft';
+    src: url('assets/minecraft.ttf') format('truetype');
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Minecraft', sans-serif;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -10px;
+    margin-bottom: 40px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+.navbar li {
+    margin: 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+.navbar li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.player_card {
+    display: flex;
+    width: 60%;
+}
+
+.player_image {
+    position: relative;
+    display: inline-block;
+}
+
+.player_image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: linear-gradient(to bottom, transparent, #000);
+    pointer-events: none;
+}
+
+.player_card h1 {
+    text-align: center;
+}
+
+.player_info {
+    margin-left: 30px;
+    flex: 1;
+}
+
+.player_info table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.player_info table td {
+    padding: 15px;
+    border-bottom: 1px solid #333;
+}
+
+.player_info table td.label {
+    font-weight: bold;
+    color: #aaa;
+    width: 200px;
+    vertical-align: middle;
+}
+
+.player_info table td.value {
+    color: #fff;
+    vertical-align: middle;
+}
+
+.player_info table td.value img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.player_info table td.value span {
+    vertical-align: middle;
+}
+
+.player_info table tr:last-child td {
+    border-bottom: none;
+}
