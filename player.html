@@ -10,15 +10,22 @@
 
 <body>
     <header>
-        <ul class="navbar">
-            <li><a href="#"><img src="/assets/logos/pplhf.png" alt="Logo" height="70px"></a></li>
-            <li><a href="#">Матчи</a></li>
-            <li><a href="#">Игроки</a></li>
-            <li><a href="#">Статистика</a></li>
-            <li><a href="#">Рейтинг</a></li>
-        </ul>
+        <div class="navbar-container">
+            <a href="#" class="navbar-logo"><img src="/assets/logos/pplhf.png" alt="Logo" height="90%"></a>
+            <button class="burger-menu" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="navbar">
+                <li><a href="#">Матчи</a></li>
+                <li><a href="#">Игроки</a></li>
+                <li><a href="#">Статистика</a></li>
+                <li><a href="#">Рейтинг</a></li>
+            </ul>
+        </div>
     </header>
-    <center>
+    <main class="main-content">
         <div class="player_card">
             <div class="player_image">
                 <img src="assets/players/gthxbr.png" alt="Logo" width="500">
@@ -46,9 +53,29 @@
                         <td class="value">Активный</td>
                     </tr>
                 </table>
+                <h1>Статистика игрока</h1>
+                <table>
+                    <tr>
+                        <td class="label">Забито</td>
+                        <td class="value">Lorem, ipsum.</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Отдано передач</td>
+                        <td class="value">Lorem, ipsum.</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Пропущено</td>
+                        <td class="value">Lorem, ipsum.</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Отбито</td>
+                        <td class="value">Lorem, ipsum.</td>
+                    </tr>
+                </table>
             </div>
     </center>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
