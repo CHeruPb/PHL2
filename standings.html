@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рейтинг - PHL 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <img src="/assets/logos/pplhf.png" alt="Логотип лиги" height="90%">
+            </a>
+            <ul class="navbar">
+                <li><a href="matches.html">Матчи</a></li>
+                <li><a href="teams.html">Команды</a></li>
+                <li><a href="standings.html" class="active">Рейтинг</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <h1 class="page-title">Рейтинг команд PHL 2</h1>
+        <div class="conferences-container">
+            <!-- Тыквенная конференция -->
+            <div class="conference-section">
+                <div class="conference-header">
+                    <h2 class="conference-title">
+                        <img src="/assets/logos/pumpkin.png" alt="Тыквенная конференция" class="conference-logo"
+                            width="50px">
+                        Тыквенная конференция
+                    </h2>
+                </div>
+
+                <div class="standings-table-container">
+                    <table class="standings-table">
+                        <thead>
+                            <tr>
+                                <th class="position">#</th>
+                                <th class="logo">Логотип</th>
+                                <th class="team-info">Команда</th>
+                                <th class="games">И</th>
+                                <th class="wins">В</th>
+                                <th class="losses">П</th>
+                                <th class="points">О</th>
+                                <th class="goal-diff">+/-</th>
+                            </tr>
+                        </thead>
+                        <tbody id="pumpkinStandings">
+                            <!-- Команды тыквенной конференции -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Арбузная конференция -->
+            <div class="conference-section">
+                <div class="conference-header">
+                    <h2 class="conference-title">
+                        <img src="/assets/logos/watermelon.png" alt="Арбузная конференция" class="conference-logo"
+                            width="50px">
+                        Арбузная конференция
+                    </h2>
+                </div>
+
+                <div class="standings-table-container">
+                    <table class="standings-table">
+                        <thead>
+                            <tr>
+                                <th class="position">#</th>
+                                <th class="logo">Логотип</th>
+                                <th class="team-info">Команда</th>
+                                <th class="games">И</th>
+                                <th class="wins">В</th>
+                                <th class="losses">П</th>
+                                <th class="points">О</th>
+                                <th class="goal-diff">+/-</th>
+                            </tr>
+                        </thead>
+                        <tbody id="watermelonStandings">
+                            <!-- Команды арбузной конференции -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <img src="https://cdn-icons-png.flaticon.com/512/3048/3048122.png" alt="Логотип лиги" class="footer-logo"
+                height="60">
+            <p>PepeLand Hockey League 2</p>
+            <p>Официальный сайт лиги</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

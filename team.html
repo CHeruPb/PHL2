@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Команда - PHL 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar-container">
+            <a href="#" class="navbar-logo">
+                <img src="/assets/logos/pplhf.png" alt="Логотип лиги" height="90%">
+            </a>
+            <ul class="navbar">
+                <li><a href="matches.html">Матчи</a></li>
+                <li><a href="teams.html">Команды</a></li>
+                <li><a href="standings.html">Рейтинг</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="team-header">
+            <div class="team-header-content">
+                <img id="teamLogo" src="" alt="Логотип команды" class="team-header-logo">
+                <div class="team-header-info">
+                    <h1 id="teamName" class="team-header-name">Название команды</h1>
+                    <div class="team-header-meta">
+                        <span id="teamCity">Город: location</span>
+                        <span id="teamFounded">Основана: 2015</span>
+                        <span id="teamCoach">Тренер: name</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Статистика команды -->
+        <div class="team-stats-section">
+            <h2 class="page-title">Статистика команды</h2>
+            <div class="stats-table-container">
+                <div class="standings-table-container">
+                    <table class="standings-table">
+                        <thead>
+                            <tr>
+                                <th class="games">Игры</th>
+                                <th class="wins">Победы</th>
+                                <th class="losses">Поражения</th>
+                                <th class="points">Очки</th>
+                                <th class="goals-for">Забито</th>
+                                <th class="goals-against">Пропущено</th>
+                                <th class="goal-diff">+/-</th>
+                                <th class="win-percentage">% побед</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="stat-value" id="teamGames">0</td>
+                                <td class="stat-value" id="teamWins">0</td>
+                                <td class="stat-value" id="teamLosses">0</td>
+                                <td class="stat-value" id="teamPoints">0</td>
+                                <td class="stat-value" id="teamGoalsFor">0</td>
+                                <td class="stat-value" id="teamGoalsAgainst">0</td>
+                                <td class="stat-value" id="teamGoalDiff">0</td>
+                                <td class="stat-value" id="teamWinPercentage">0%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="page-title">Игроки команды</h2>
+
+        <div class="players-container" id="playersContainer">
+            <!-- Карточки игроков будут добавлены через JavaScript -->
+        </div>
+    </main>
+
+    <!-- Модальное окно для статистики игрока -->
+    <div class="modal-overlay" id="playerModal">
+        <div class="player-modal">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <div class="player-modal-avatar">
+                        <div class="player-number-large" id="modalPlayerNumber">10</div>
+                    </div>
+                    <div class="player-modal-info">
+                        <h2 id="modalPlayerName" class="modal-player-name">Имя игрока</h2>
+                        <div class="player-modal-position" id="modalPlayerPosition">Позиция</div>
+                    </div>
+                </div>
+                <button class="close-modal" id="closePlayerModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-stats">
+                    <div class="modal-stat">
+                        <div class="modal-stat-label">Игры</div>
+                        <div class="modal-stat-value" id="statGames">0</div>
+                    </div>
+                    <div class="modal-stat">
+                        <div class="modal-stat-label">Голы</div>
+                        <div class="modal-stat-value" id="statGoals">0</div>
+                    </div>
+                    <div class="modal-stat">
+                        <div class="modal-stat-label">Передачи</div>
+                        <div class="modal-stat-value" id="statAssists">0</div>
+                    </div>
+                    <div class="modal-stat">
+                        <div class="modal-stat-label">Очки</div>
+                        <div class="modal-stat-value" id="statPoints">0</div>
+                    </div>
+                    <div class="modal-stat">
+                        <div class="modal-stat-label">Штрафные минуты</div>
+                        <div class="modal-stat-value" id="statPenalties">0</div>
+                    </div>
+                    <div class="modal-stat">
+                        <div class="modal-stat-label">+/-</div>
+                        <div class="modal-stat-value" id="statPlusMinus">0</div>
+                    </div>
+                </div>
+
+                <div class="modal-actions">
+                    <a href="#" class="btn-full-player" id="fullPlayerLink">Полная страница игрока</a>
+                    <button class="btn-close" id="closePlayerModalBtn">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <img src="https://cdn-icons-png.flaticon.com/512/3048/3048122.png" alt="Логотип лиги" class="footer-logo"
+                height="60">
+            <p>PepeLand Hockey League 2</p>
+            <p>Официальный сайт лиги</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

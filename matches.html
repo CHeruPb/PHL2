@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHL 2 - Матчи</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <img src="/assets/logos/pplhf.png" alt="Логотип лиги" height="90%">
+            </a>
+            <ul class="navbar">
+                <li><a href="matches.html" class="active">Матчи</a></li>
+                <li><a href="teams.html">Команды</a></li>
+                <li><a href="standings.html">Рейтинг</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <h1 class="page-title">Матчи PHL 2</h1>
+
+        <!-- Предстоящие матчи -->
+        <div class="matches-section">
+            <h2 class="section-title">Предстоящие матчи</h2>
+            <div class="standings-table-container">
+                <table class="standings-table" id="upcomingMatchesTable">
+                    <thead>
+                        <tr>
+                            <th class="date">Дата</th>
+                            <th class="time">Время</th>
+                            <th class="home-team">Команда хозяев</th>
+                            <th class="score">Счет</th>
+                            <th class="away-team">Команда гостей</th>
+                            <th class="venue">Место</th>
+                        </tr>
+                    </thead>
+                    <tbody id="upcomingMatchesBody">
+                        <!-- Предстоящие матчи будут добавлены через JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Завершенные матчи -->
+        <div class="matches-section">
+            <h2 class="section-title">Завершенные матчи</h2>
+            <div class="standings-table-container">
+                <table class="standings-table" id="finishedMatchesTable">
+                    <thead>
+                        <tr>
+                            <th class="date">Дата</th>
+                            <th class="home-team">Команда хозяев</th>
+                            <th class="score">Счет</th>
+                            <th class="away-team">Команда гостей</th>
+                            <th class="venue">Место</th>
+                        </tr>
+                    </thead>
+                    <tbody id="finishedMatchesBody">
+                        <!-- Завершенные матчи будут добавлены через JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Модальное окно для деталей матча -->
+    <div class="modal-overlay" id="matchModal">
+        <div class="team-modal">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <div class="match-logos">
+                        <img id="modalHomeLogo" src="" alt="Команда хозяев" class="modal-logo">
+                        <span id="modalScore" class="match-score">VS</span>
+                        <img id="modalAwayLogo" src="" alt="Команда гостей" class="modal-logo">
+                    </div>
+                    <h2 class="match-title" id="modalMatchTitle">Матч</h2>
+                </div>
+                <button class="close-modal" id="closeMatchModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <!-- Основная информация о матче -->
+                <div class="match-main-info">
+                    <div class="match-date-venue">
+                        <div class="modal-stat">
+                            <div class="modal-stat-label">Дата и время</div>
+                            <div class="modal-stat-value" id="modalDate">Дата и время</div>
+                        </div>
+                        <div class="modal-stat">
+                            <div class="modal-stat-label">Место проведения</div>
+                            <div class="modal-stat-value" id="modalVenue">Место проведения</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Команды и счет -->
+                <div class="match-teams-display">
+                    <!-- Команда хозяев -->
+                    <div class="match-team home-team">
+                        <div class="team-badge">
+                            <div class="team-logo-name">
+                                <img id="modalHomeLogo" src="" alt="Команда хозяев" class="team-large-logo">
+                                <div class="team-name-badge" id="modalHomeName">Команда хозяев</div>
+                            </div>
+                            <div class="team-role">ДОМА</div>
+                        </div>
+                    </div>
+
+                    <!-- Центральный счет -->
+                    <div class="match-score-center">
+                        <div class="score-display" id="modalScore">VS</div>
+                        <div class="match-status" id="modalStatus">Запланирован</div>
+                    </div>
+
+                    <!-- Команда гостей -->
+                    <div class="match-team away-team">
+                        <div class="team-badge">
+                            <div class="team-logo-name">
+                                <img id="modalAwayLogo" src="" alt="Команда гостей" class="team-large-logo">
+                                <div class="team-name-badge" id="modalAwayName">Команда гостей</div>
+                            </div>
+                            <div class="team-role">В ГОСТЯХ</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <img src="https://cdn-icons-png.flaticon.com/512/3048/3048122.png" alt="Логотип лиги" class="footer-logo" height="60">
+            <p>PepeLand Hockey League 2</p>
+            <p>Официальный сайт лиги</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
