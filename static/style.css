@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Minecraft';
-    src: url('assets/minecraft.ttf') format('truetype');
+    src: url('/assets/minecraft.ttf') format('truetype');
 }
 
 body {
@@ -1142,7 +1142,6 @@ footer {
     .matches-section .standings-table .away-team {
         width: 20%;
         min-width: 200px;
-        text-align: left;
     }
 
     .matches-section .standings-table .score {

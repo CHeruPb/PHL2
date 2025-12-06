@@ -504,8 +504,8 @@ function generateMatches() {
                 <td class="time">${timeString}</td>
                 <td class="home-team">
                     <div class="team-cell">
-                        <img src="${homeTeam.logo}" alt="${homeTeam.name}" class="table-team-logo">
                         <span>${homeTeam.name}</span>
+                        <img src="${homeTeam.logo}" alt="${homeTeam.name}" class="table-team-logo">
                     </div>
                 </td>
                 <td class="score">VS</td>
